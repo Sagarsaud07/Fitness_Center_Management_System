@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Center Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .title {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .link h2 {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            width: 300px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .link h2:hover {
+            background-color: #0056b3;
+        }
+
+        .link h2 a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .link select {
+            margin-top: 20px;
+            padding: 8px;
+            width: 300px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <h1>Welcome to the Fitness Center Management System</h1>
+    </div>
+
+    <div class="link">
+
+        <h2>
+            <select onchange="if (this.value) window.location.href=this.value;">
+                <option value="" disabled selected>Take Attendance</option>
+                <option value="morning_shift_members.php">Morning Shift </option>
+                <option value="evening_shift_members.php">Evening Shift </option>
+            </select>
+        </h2>
+
+        <h2>
+            <select onchange="if (this.value) window.location.href=this.value;">
+                <option value="" disabled selected>Schedule management</option>
+                <option value="morning_shift_attendance.php">Morning Shift </option>
+                <option value="evening_shift_attendance.php">Evening Shift </option>
+            </select>
+        </h2>
+        <h2>
+            <select onchange="if (this.value) window.location.href=this.value;">
+                <option value="" disabled selected>Attendance Detail</option>
+                <option value="attendance_check.php">Morning Shift</option>
+                <option value="attendance_check2.php">Evening Shift</option>
+            </select>
+        </h2>
+        <h2><a href="form.html">New Member Registration</a></h2>
+        <h2><a href="member_list.php">Members List</a></h2>
+    </div>
+
+</body>
+
+</html>
